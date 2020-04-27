@@ -3,9 +3,10 @@
 	"version": "1.0.0",
 	"description": "Full Stack KeyValue Store using React, Redux, and Node",
 	"scripts": {
-		"start": "run-p start:dev start:server",
-		"start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
-		"start:server": "node  server/server.js",
+		"start": "run-p start:server",
+		"start:dev": "run-p start:server start:webpack",
+		"start:webpack": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+		"start:server": "node server/server.js",
 		"test": "run-p start:server test:ci",
 		"test:ci": "jest",
 		"clean:build": "rimraf ./build && mkdir build",
@@ -14,7 +15,8 @@
 	},
 	"jest": {
 		"setupFiles": [
-			"<rootDir>/src/test/testSetup.js"
+			"<rootDir>/src/test/testSetup.js",
+			"<rootDir>/src/test/jest.config.js"
 		],
 		"moduleNameMapper": {
 			"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test/fileMock.js",

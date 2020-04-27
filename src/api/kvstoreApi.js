@@ -1,6 +1,7 @@
 const fetch = require("isomorphic-fetch");
 
-const baseUrl = process.env.API_URL || "http://localhost:8080";
+// production uses relative path.  Dev server needs a url since Dev runs on 3000 and server runs 8080
+const baseUrl =  process.env.API_URL || '';
 
 export function getItems() {
 	return fetch(baseUrl + "/items/")

@@ -11,7 +11,7 @@ npm install
 ## Run Development App
 http://localhost:3000/  This starts the webpack development server for the front end application and also starts the backend rest api.
 ```
-npm run start
+npm run start:dev
 ```
 
 ## Run integration tests
@@ -27,7 +27,7 @@ npm run build
 ## Run Production build
 http://localhost:8080/ This starts the backend rest api and also serves the static front end files.
 ```
-npm run start:server
+npm run start
 ```
 
 ## Rest API
