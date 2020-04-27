@@ -3,6 +3,8 @@ This project contains a front end React application as well as a back end node
 express app for the Rest api for the key value store.  It uses a simple in memory
 store so there is very little to configure.
 
+Here is a running [Demo](http://reactreduxkvstore-env.eba-upiwzkqd.us-east-1.elasticbeanstalk.com/) hosted on AWS Elastic Beanstalk.
+
 ## Setup
 ```
 npm install
