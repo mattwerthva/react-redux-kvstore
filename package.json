@@ -1,17 +1,16 @@
 {
 	"name": "react-redux-kvstore",
+	"version": "1.0.0",
 	"description": "Full Stack KeyValue Store using React, Redux, and Node",
 	"scripts": {
-		"start": "run-p start:dev start:api",
+		"start": "run-p start:dev start:server",
 		"start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
-		"start:api": "node  server/server.js",
-		"test": "run-p start:api test:ci",
+		"start:server": "node  server/server.js",
+		"test": "run-p start:server test:ci",
 		"test:ci": "jest",
 		"clean:build": "rimraf ./build && mkdir build",
 		"prebuild": "run-p clean:build",
-		"build": "webpack --config webpack.config.prod.js",
-		"start:prod": "run-p start:api serve:prod",
-		"serve:prod": "http-server ./build"
+		"build": "webpack --config webpack.config.prod.js"
 	},
 	"jest": {
 		"setupFiles": [
@@ -24,6 +23,7 @@
 	},
 	"dependencies": {
 		"express": "^4.16.3",
+		"cors": "2.8.5",
 		"body-parser": "^1.18.3",
 		"bootstrap": "4.3.1",
 		"prop-types": "15.7.2",
@@ -52,7 +52,6 @@
 		"eslint-plugin-react": "7.12.4",
 		"fetch-mock": "7.3.1",
 		"html-webpack-plugin": "3.2.0",
-		"http-server": "0.9.0",
 		"jest": "24.5.0",
 		"mini-css-extract-plugin": "0.5.0",
 		"npm-run-all": "4.1.5",
@@ -64,7 +63,7 @@
 		"rimraf": "2.6.3",
 		"style-loader": "0.23.1",
 		"webpack": "4.29.6",
-		"webpack-bundle-analyzer": "3.1.0",
+		"webpack-bundle-analyzer": "^3.7.0",
 		"webpack-cli": "3.3.0",
 		"webpack-dev-server": "3.2.1"
 	},

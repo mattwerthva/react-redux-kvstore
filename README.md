@@ -1,6 +1,6 @@
-## A basic FullStack app to demonstrate React with Redux with NodeJS back end.
+## A FullStack Key / Value store with a React / Redux front end and NodeJS back end.
 This project contains a front end React application as well as a back end node
-express app as the Rest api for the key value store.  It uses a simple in memory
+express app for the Rest api for the key value store.  It uses a simple in memory
 store so there is very little to configure.
 
 ## Setup
@@ -9,8 +9,7 @@ npm install
 ```
 
 ## Run Development App
-http://localhost:3000/
-
+http://localhost:3000/  This starts the webpack development server for the front end application and also starts the backend rest api.
 ```
 npm run start
 ```
@@ -26,9 +25,9 @@ npm run build
 ```
 
 ## Run Production build
-http://localhost:8080/
+http://localhost:8080/ This starts the backend rest api and also serves the static front end files.
 ```
-npm run start:prod
+npm run start:server
 ```
 
 ## Rest API
